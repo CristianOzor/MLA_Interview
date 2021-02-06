@@ -3,18 +3,19 @@ import json
 
 
 def request_data():
-	request_data = requests.get("https://api.mercadolibre.com/sites/MLA//search?seller_id=179571326").json()
+	
+	#El id dado en el test es 179571326 
+	user_id = input("Ingrese el ID del usuario que desea buscar: ")
+	request_data = requests.get(f"https://api.mercadolibre.com/sites/MLA//search?seller_id={user_id}").json()
 	
 	
 	request_data = request_data['results']
 	
-
-	file_name = input("Por favor introduzca el nombre al archivo a guardar: ")
 	
 	try:
-		with open(f"{file_name}.log", "w+") as file:
+		with open(f"{user_id}.log", "w+") as file:
 		
-			file.write("ID --- TITLE --- CATEGORY_ID --- NAME\n")
+			file.write("ID + --- + TITLE + --- + CATEGORY_ID + --- + NAME\n\n")
 		
 			for key in request_data:
 				id = key["id"]

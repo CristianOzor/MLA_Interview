@@ -1,7 +1,7 @@
 # MLA_Interview
 
 El programa MLA_Interview es un script que se realizó en Python cuya función es buscar en la API de Mercadolibre información sobre items en ventas
-de un ID de vendedor especificado por el usuario.
+de un ID de vendedor especificado por el usuario para luego listarlos de forma ordenada.
 
 ## ¿Cómo funciona?
 

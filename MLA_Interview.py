@@ -2,10 +2,10 @@ import requests
 import json
 
 
-def request_data():
+ef request_data():
 	
 	#El id dado en el test es 179571326 
-	user_id = input("Ingrese el ID del usuario que desea buscar: ")
+	user_id = int(input("Ingrese el ID del usuario que desea buscar: "))
 	request_data = requests.get(f"https://api.mercadolibre.com/sites/MLA//search?seller_id={user_id}").json()
 	
 	
